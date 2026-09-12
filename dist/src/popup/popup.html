@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanuensis - Ambient Typing Scribe</title>
+  <script type="module" crossorigin src="/assets/popup-u8sO7oVx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/monkeytype_bridge-DlcflRNH.js">
+  <link rel="stylesheet" crossorigin href="/assets/popup-FPC6h72Q.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="M6 8h.01M10 8h.01M14 8h.01M18 8h.01M6 12h.01M10 12h.01M14 12h.01M18 12h.01M8 16h8" />
+        </svg>
+        <span class="brand-title">amanuensis</span>
+      </div>
+      <div class="header-actions">
+        <button id="toggle-tracking-btn" class="icon-btn" title="Toggle Tracking">
+          <span id="tracking-status-dot" class="status-dot active"></span>
+        </button>
+        <button id="open-dashboard-btn" class="icon-btn" title="Open Full Dashboard">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Subtitle Banner -->
+    <div class="ambient-tagline">
+      <span>ambient browser telemetry</span>
+      <span id="privacy-badge" class="badge">100% local</span>
+    </div>
+
+    <!-- Main Stats Grid -->
+    <main class="stats-grid">
+      <div class="stat-card primary">
+        <div class="stat-label">today wpm</div>
+        <div class="stat-value" id="today-wpm">0</div>
+        <div class="stat-sub" id="net-wpm-sub">net: 0 wpm</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">accuracy</div>
+        <div class="stat-value" id="today-accuracy">100<span class="unit">%</span></div>
+        <div class="stat-sub" id="backspaces-count">0 backspaces</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">keystrokes</div>
+        <div class="stat-value" id="total-keys">0</div>
+        <div class="stat-sub" id="typing-time">0m active</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">peak burst</div>
+        <div class="stat-value" id="peak-wpm">0</div>
+        <div class="stat-sub">fastest burst</div>
+      </div>
+    </main>
+
+    <!-- Quick Live Test Input -->
+    <div class="test-sandbox">
+      <input type="text" id="quick-test-input" placeholder="Type here to test live tracking..." autocomplete="off" spellcheck="false" />
+    </div>
+
+    <!-- Weak Keys Spotlight -->
+    <section class="weak-keys-section">
+      <div class="section-title">troubled keys today</div>
+      <div id="weak-keys-list" class="weak-keys-container">
+        <span class="empty-hint">Type anywhere to map cadence...</span>
+      </div>
+    </section>
+
+    <!-- Action Buttons -->
+    <footer class="popup-footer">
+      <button id="practice-bridge-btn" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        Practice Typos on Monkeytype
+      </button>
+      <button id="view-dashboard-btn" class="btn btn-secondary">
+        Full Analytics & Heatmap
+      </button>
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "amanuensis",
+  "version": "1.0.0",
+  "description": "Your private ambient scribe. Maps real-world typing cadence, mistakes, and WPM across the web with Monkeytype aesthetics and training bridge",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "vitest run"
+  },
+  "keywords": ["monkeytype", "typing", "wpm", "chrome-extension", "privacy", "keyboard"],
+  "author": "helliot",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.280",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3",
+    "vite-plugin-static-copy": "^2.2.0",
+    "vitest": "^2.1.8"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7"
+  }
+}
